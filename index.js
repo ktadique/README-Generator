@@ -7,11 +7,6 @@ const generateMarkdown = require("./utils/generateMarkdown");
 const questions = [
   {
     type: "input",
-    message: "Please enter your name:",
-    name: "name",
-  },
-  {
-    type: "input",
     message: "Please enter your GitHub username:",
     name: "username",
   },
@@ -59,7 +54,14 @@ const questions = [
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(data) {
+  //use file system module to create/write md file
+  fs.writeFile("README.md", data, (error) =>
+    error
+      ? console.error(error)
+      : console.log("README for project was created succesfully!")
+  );
+}
 
 // function to initialize program
 function init() {
