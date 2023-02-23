@@ -26,6 +26,20 @@ const questions = [
     name: "projectDesc",
   },
   {
+    type: "confirm",
+    message: "Does this project contain any preview images/videos?",
+    name: "projectPreviewConfirm",
+  },
+  {
+    type: "editor",
+    message:
+      "Please include any images or video link using markdown syntax eg. ![alt text](/img/screenshot.png)",
+    name: "projectPreview",
+    when(data) {
+      return data.projectPreviewConfirm;
+    },
+  },
+  {
     type: "list",
     message: "Please select a project license:",
     name: "projectLicense",
@@ -37,7 +51,7 @@ const questions = [
     name: "projectInstall",
   },
   {
-    type: "input",
+    type: "editor",
     message: "Please explain how to use the project:",
     name: "projectUsage",
   },

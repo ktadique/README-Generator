@@ -2,12 +2,11 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Description​
+## Description
 
 This repository contains code for a README Generator that creates a markdown file by providing users with several question prompts through the CLI and using the respective user input.
 
-## Table of Contents
-
+## Table of Contents 
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -15,50 +14,49 @@ This repository contains code for a README Generator that creates a markdown fil
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
-  ​
 
 ## Installation
 
-​
-In order to properly use this README Generator, please ensure that [Node.js](https://nodejs.org/en/) is installed
+Before using this README Generator, please ensure that [Node.js](https://nodejs.org/en/) is installed, 
+then ensure that all necessary dependencies are installed by running the following command:
 
-Then ensure that all necessary dependencies are installed by running the following command:
-
-`npm install​`
+```bash
+npm install
+```
 
 ## Usage
 
-​
-In order to use this README Generator please do the following:
+In order to use this README Generator please do the following: 
 
-```md
+```bash
 - Navigate to the project's root folder
 - Run node index.js
 - Answer all the prompts
+- When prompted to open editor, save file
 - Check generated README
 ```
 
+## README Generator Preview
+
+
+
 ## License
 
-​
 This project is licensed under the MIT license.
-
+    
 ## Contributing
 
-To contribute to this project:
-
-​please fork and clone this repo locally, then submit a pull request with any changes.
+To contribute to this project, fork and clone this repository locally, then submit a pull request with any suggested changes.
 
 ## Tests
 
 In order to run tests on this project please run the following command:
-​
 
-```
-​node test
+```bash
+node test
 ```
 
 ## Questions
+If you have any questions regarding this project, please contact me via [email](mailto:kch.tadique@gmail.com)<br>
+Or check out my GitHub **@[ktadique](https://github.com/ktadique)** for my other projects! 
 
-- If you have any questions regarding this project, please contact me via [email](mailto:kch.tadique@gmail.com).
-- Or check out my github @[ktadique](https://github.com/ktadique) for other projects!
