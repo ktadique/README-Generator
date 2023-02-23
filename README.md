@@ -39,7 +39,7 @@ In order to use this README Generator please do the following:
 
 ## README Generator Preview
 
-![README Generator Preview](./img/screenshot.png)
+![README Generator Preview](./img/Screenshot.png)
 
 Watch the application in action:
 
