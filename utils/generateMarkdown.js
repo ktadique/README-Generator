@@ -1,5 +1,9 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
+  //markdown formatting
+  const codeBacktick = "`";
+  const codeBlockBacktick = "```";
+
   //Licences
   const chosenLicense = data.projectLicense;
   let licenseBadge = "";
@@ -51,32 +55,42 @@ ${data.projectDesc}
 ​
 In order to properly use this ${data.projectTitle}, please ensure that [Node.js](https://nodejs.org/en/) is installed
 
-Then ensure that all necessary dependencies by running the following command:
+Then ensure that all necessary dependencies are installed by running the following command:
+
+${codeBacktick}
 ${data.projectInstall}
+​${codeBacktick}
 
-
-​
 ## Usage
 ​
 In order to use this ${data.projectTitle} please do the following: 
 
+${codeBlockBacktick}
 ${data.projectUsage}.
-​
+​${codeBlockBacktick}
+
 ## License
 ​
 ${licenseText}
     
 ## Contributing
 
-To contribute to this project, ​${data.projectContribute}
+To contribute to this project: 
+
+${codeBlockBacktick}
+​${data.projectContribute}
+${codeBlockBacktick}
 
 ## Tests
+
 In order to run tests on this project please run the following command:
 ​
+${codeBacktick}
 ​${data.projectTest}
+${codeBacktick}
 
 ## Questions
-​
+
 - If you have any questions regarding this project, please contact me via [email](mailto:${data.email}).
 - Or check out my github @[${data.username}](https://github.com/${data.username}) for other projects! 
 
