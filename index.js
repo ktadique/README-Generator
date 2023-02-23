@@ -33,7 +33,7 @@ const questions = [
   },
   {
     type: "input",
-    message: "Please explain how the project will be installed:",
+    message: "Please input what command must be ran to install this project:",
     name: "projectInstall",
   },
   {
@@ -48,7 +48,7 @@ const questions = [
   },
   {
     type: "input",
-    message: "Please explain how users may test the project:",
+    message: "Please input what command must be run to test this project:",
     name: "projectTest",
   },
 ];
@@ -65,8 +65,12 @@ function writeToFile(data) {
 
 // function to initialize program
 function init() {
+  //prompt user questions regarding project
   inquirer.prompt(questions).then((data) => {
+    //test
     console.log(data);
+    //then call writeToFile function using data from questions
+    writeToFile(generateMarkdown(data));
   });
 }
 

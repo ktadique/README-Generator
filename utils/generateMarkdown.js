@@ -1,5 +1,6 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
+  //Licences
   const chosenLicense = data.projectLicense;
   let licenseBadge = "";
   let licenseText = `This project is licensed under the ${chosenLicense} license.`;
@@ -23,10 +24,10 @@ function generateMarkdown(data) {
       licenseBadge = licenseMozilla;
       break;
     case "No License":
-      licenseText = "This project has no License";
+      licenseText = "This project has no license";
       break;
     default:
-      console.log("Please select one of the options");
+      console.log("Please select one of the options.");
       break;
   }
 
@@ -48,9 +49,11 @@ ${data.projectDesc}
 ​
 ## Installation
 ​
-In order to properly use this ${data.projectTitle}, please install all necessary dependencies by running the following command:
-​
+In order to properly use this ${data.projectTitle}, please ensure that [Node.js](https://nodejs.org/en/) is installed
+
+Then ensure that all necessary dependencies by running the following command:
 ${data.projectInstall}
+
 
 ​
 ## Usage
@@ -65,16 +68,18 @@ ${licenseText}
     
 ## Contributing
 
-To contribute to this project, ​${data.projectInstall}
+To contribute to this project, ​${data.projectContribute}
 
 ## Tests
 In order to run tests on this project please run the following command:
 ​
 ​${data.projectTest}
+
 ## Questions
 ​
-- If you have any questions regarding this project, please contact me via [email](mailto:${email}).
-- Or check out my github @[${username}](https://github.com/${username}) for other projects! 
+- If you have any questions regarding this project, please contact me via [email](mailto:${data.email}).
+- Or check out my github @[${data.username}](https://github.com/${data.username}) for other projects! 
+
 `;
 }
 
