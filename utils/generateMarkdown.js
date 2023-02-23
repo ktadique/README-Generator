@@ -2,12 +2,15 @@
 function generateMarkdown(data) {
   const chosenLicense = data.projectLicense;
   let licenseBadge = "";
-  let licenseText = "";
+  let licenseText = `This project is licensed under the ${chosenLicense} license.`;
 
   //License Badges
-  const licenseMIT = "";
-  const licenseGNU = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
-  const licenseMozilla = "";
+  const licenseMIT =
+    "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+  const licenseGNU =
+    "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+  const licenseMozilla =
+    "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
 
   switch (chosenLicense) {
     case "MIT":
@@ -20,65 +23,59 @@ function generateMarkdown(data) {
       licenseBadge = licenseMozilla;
       break;
     case "No License":
-      licenseText = "No License";
+      licenseText = "This project has no License";
       break;
     default:
       console.log("Please select one of the options");
       break;
   }
 
-return `# ${data.projectTitle}
-​
-![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
-​
-## Description
-​
-I will use this code to give taking over the world a go.
-​
+  return `# ${data.projectTitle}
+
+${licenseBadge}
+
+## Description​
+${data.projectDesc}
+
 ## Table of Contents 
-​
-* [Installation](#installation)
-​
-* [Usage](#usage)
-​
-* [License](#license)
-​
-* [Contributing](#contributing-here-is-a-header)
-​
-* [Tests](#tests)
-​
-* [Questions](#questions)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 ​
 ## Installation
 ​
-To install necessary dependencies, run the following command:
+In order to properly use this ${data.projectTitle}, please install all necessary dependencies by running the following command:
 ​
-```
-npm install
-```
+${data.projectInstall}
+
 ​
 ## Usage
 ​
-You can use this applicaiton by running `node index.js`.
+In order to use this ${data.projectTitle} please do the following: 
+
+${data.projectUsage}.
 ​
 ## License
 ​
-This project is licensed under the MIT license.
+${licenseText}
     
-## Contributing Here Is A Header
-​
-Fork and pull request.
-​
+## Contributing
+
+To contribute to this project, ​${data.projectInstall}
+
 ## Tests
+In order to run tests on this project please run the following command:
 ​
-To run tests, run the following command:
-​
-```
-npm test
-```
-​
+​${data.projectTest}
 ## Questions
 ​
-`;}
+- If you have any questions regarding this project, please contact me via [email](mailto:${email}).
+- Or check out my github @[${username}](https://github.com/${username}) for other projects! 
+`;
+}
 
 module.exports = generateMarkdown;
