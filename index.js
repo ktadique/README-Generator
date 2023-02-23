@@ -73,7 +73,7 @@ function writeToFile(data) {
   fs.writeFile("README.md", data, (error) =>
     error
       ? console.error(error)
-      : console.log("README for project was created succesfully!")
+      : console.log("README was created successfully!")
   );
 }
 
