@@ -74,7 +74,7 @@ ${codeBlockBacktick}
 
 In order to use this ${data.projectTitle} please do the following: 
 
-${codeBlockBacktick}bash
+${codeBlockBacktick}md
 ${data.projectUsage}
 ${codeBlockBacktick}
 
@@ -99,6 +99,9 @@ ${data.projectTest}
 ${codeBlockBacktick}
 
 ## Questions
+
+This README was generated using the [README Generator](https://github.com/ktadique/README-Generator)!
+
 If you have any questions regarding this project, please contact me via [email](mailto:${data.email})<br>
 Or check out my GitHub **@[${data.username}](https://github.com/${data.username})** for my other projects! 
 

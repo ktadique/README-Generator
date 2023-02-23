@@ -81,8 +81,6 @@ function writeToFile(data) {
 function init() {
   //prompt user questions regarding project
   inquirer.prompt(questions).then((data) => {
-    //test
-    console.log(data);
     //then call writeToFile function using data from questions
     writeToFile(generateMarkdown(data));
   });

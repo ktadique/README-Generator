@@ -28,16 +28,18 @@ npm install
 
 In order to use this README Generator please do the following: 
 
-```bash
+```md
 - Navigate to the project's root folder
 - Run node index.js
 - Answer all the prompts
-- When prompted to open editor, save file
-- Check generated README
+- When prompted to open editor, enter details in editor before saving and closing.
+- Check generated README located in root folder.
+
 ```
 
 ## README Generator Preview
 
+![Project preview](/img/screenshot.png)
 
 
 ## License
@@ -46,7 +48,7 @@ This project is licensed under the MIT license.
     
 ## Contributing
 
-To contribute to this project, fork and clone this repository locally, then submit a pull request with any suggested changes.
+To contribute to this project, fork and clone this repo locally, then submit a pull request.
 
 ## Tests
 
@@ -57,6 +59,9 @@ node test
 ```
 
 ## Questions
+
+This README was generated using the [README Generator](https://github.com/ktadique/README-Generator)!
+
 If you have any questions regarding this project, please contact me via [email](mailto:kch.tadique@gmail.com)<br>
 Or check out my GitHub **@[ktadique](https://github.com/ktadique)** for my other projects! 
 
